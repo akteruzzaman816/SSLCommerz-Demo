@@ -49,7 +49,7 @@ public class MainActivity extends AppCompatActivity {
 
     private void paymentProcess(String amount) {
 
-        MandatoryFieldModel mandatoryFieldModel = new MandatoryFieldModel("bdtas5e772deb8ff87", "bdtas5e772deb8ff87@ssl", amount, "Your transaction id", CurrencyType.BDT, SdkType.TESTBOX, SdkCategory.BANK_LIST);
+        MandatoryFieldModel mandatoryFieldModel = new MandatoryFieldModel("your store id", "store password", amount, "Your transaction id", CurrencyType.BDT, SdkType.TESTBOX, SdkCategory.BANK_LIST);
         PayUsingSSLCommerz.getInstance().setData(MainActivity.this, mandatoryFieldModel, new OnPaymentResultListener() {
             @Override
             public void transactionSuccess(TransactionInfo transactionInfo) {
